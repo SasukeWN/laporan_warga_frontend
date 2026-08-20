@@ -37,7 +37,7 @@ export default function DaftarWarga() {
         <div className="relative pt-30">
 
 
-            <div className="fixed top-4 right-0 left-0 md:left-64 z-50 flex justify-center px-4 md:px-6 ">
+            <div className="md:fixed top-4 right-0 left-0 md:left-64 z-50 flex justify-center px-4 md:px-6 ">
 
                 <header className="w-full max-w-10xl bg-white shadow-xl rounded-2xl p-6 flex justify-between items-center">
                     <div className="flex gap-3 items-center">

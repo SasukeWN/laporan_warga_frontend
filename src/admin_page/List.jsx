@@ -32,7 +32,7 @@ export default function List() {
             <div className="relative pt-28 bg-slate-50/60 font-sans ">
 
 
-                <div className="fixed top-4 right-0 left-0 md:left-64 z-50 flex justify-center px-4 md:px-6">
+                <div className="md:fixed top-4 right-0 left-0 md:left-64 z-50 flex justify-center px-4 md:px-6">
                     <header className="w-full max-w-6xl bg-white/90 backdrop-blur-md border border-slate-200/80 shadow-md shadow-slate-200/40 rounded-2xl p-4 md:px-6 flex justify-between items-center transition-all">
                         <div className="flex items-center gap-3">
                             <div className="p-2.5 bg-blue-50 border border-blue-100 rounded-xl text-blue-600">
