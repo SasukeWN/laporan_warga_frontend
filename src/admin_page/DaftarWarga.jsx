@@ -34,7 +34,7 @@ export default function DaftarWarga() {
     }, [])
 
     return (
-        <div className="relative pt-30">
+        <div className="relative md:pt-30">
 
 
             <div className="md:fixed top-4 right-0 left-0 md:left-64 z-50 flex justify-center px-4 md:px-6 ">
@@ -60,14 +60,7 @@ export default function DaftarWarga() {
             <DeleteUserAdmin dataBawaan={dataWarga.find((warga) => warga.id === selectId)} isTampil={tampilDelete} tutupDelete={() => setTampilDelete(false)} />
             
 
-            <div className="fixed top-4 right-0 left-0 md:left-64 z-40 flex justify-center px-4 md:px-6">
-                <header className="w-full max-w-[1000px] bg-white shadow-md shadow-slate-200/50 rounded-2xl p-4 md:p-6 flex flex-col md:flex-row justify-between items-start md:items-center gap-4 border border-slate-100">
-                    <div>
-                        <h2 className="font-bold text-xl text-slate-800">Manajemen Warga</h2>
-                        <p className="text-sm text-slate-500 mt-1">Kelola data kependudukan warga desa</p>
-                    </div>
-                </header>
-            </div>
+
 
             {/* --- KONTEN TABEL --- */}
             <div className="mt-8 relative z-10 flex justify-center px-4 md:px-6">
