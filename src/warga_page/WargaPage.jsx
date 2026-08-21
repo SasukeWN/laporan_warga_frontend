@@ -11,6 +11,13 @@ export default function WargaPage() {
 
     const [tampilForm, setTampilForm] = useState(false)
     const [isiData, setIsiData] = useState([])
+    const [searchData, setSearchData] = useState('')
+
+
+    const handleChange = (e) => {
+        setSearchData(e.target.value)
+    }
+
 
     const ListData = async () => {
         try {
@@ -31,6 +38,11 @@ export default function WargaPage() {
         }
 
     }
+
+    const searchFitur = isiData.filter((p) => {
+        const gabunganTeks = `${p.Judul_laporan || ""} ${p.Nama_warga || ""} ${p.deskripsi || ""}`.toLowerCase();
+        return gabunganTeks.includes(searchData.toLowerCase());
+    });
 
     useEffect(() => {
         ListData();
@@ -180,6 +192,8 @@ export default function WargaPage() {
                         {/* Search */}
                         <div>
                             <input
+                                onChange={handleChange}
+                                value={searchData}
                                 type="text"
                                 placeholder="Cari laporan..."
                                 className="
@@ -228,8 +242,8 @@ export default function WargaPage() {
 
                             {/* DATA DARI API DI-LOOPING DI SINI */}
                             <tbody className="divide-y divide-slate-100 text-sm">
-                                {isiData && isiData.length > 0 ? (
-                                    isiData.map((item, index) => (
+                                {searchFitur && searchFitur.length > 0 ? (
+                                    searchFitur.map((item, index) => (
                                         <tr key={item.id} className="hover:bg-slate-50/50 transition-colors">
                                             {/* Nomor di-generate dari index array (index dimulai dari 0, jadi ditambah 1) */}
                                             <td className="py-4 px-6 text-center text-slate-500 font-medium">
@@ -265,7 +279,7 @@ export default function WargaPage() {
                                     /* Tampilan jika data masih kosong/sedang dimuat */
                                     <tr>
                                         <td colSpan="5" className="py-10 text-center text-slate-400">
-                                            Belum ada laporan yang tercatat saat ini.
+                                            Tidak ada Laporan
                                         </td>
                                     </tr>
                                 )}
