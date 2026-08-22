@@ -72,18 +72,6 @@ export default function EditLaporanAdmin({ tutupEdit, isTampil, dataBawaan }) {
                         Data Warga
                     </h3>
 
-                    <div className="flex flex-col gap-1">
-                        <label className="text-sm font-semibold text-gray-700">Nama Warga:</label>
-                        <input
-                            required
-                            value={FormData.Nama_warga}
-                            onChange={handleChange}
-                            name='Nama_warga'
-                            type="text"
-                            placeholder="Masukkan nama lengkap"
-                            className="px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors"
-                        />
-                    </div>
 
                     <div className="flex flex-col gap-1">
                         <label className="text-sm font-semibold text-gray-700">Judul Laporan:</label>
