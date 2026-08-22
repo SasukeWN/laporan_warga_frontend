@@ -30,7 +30,7 @@ export default function WargaPage() {
                 const statusError = error.response.data.status;
 
 
-                alert(`Gagal (${statusError}): ${pesanError}`);
+                alert(`Gagal terhubung`);
             } else {
 
                 alert("Tidak dapat terhubung ke server.");
